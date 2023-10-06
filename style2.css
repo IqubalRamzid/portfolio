@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Space+Mono&display=swap');
+
+* ::before ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400% ;
+	animation: gradient 15s ease infinite;
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden ;
+  
+}
+.container {
+  text-align: center;
+  perspective: 1000px;
+
+}
+h1 {
+  transform-style: preserve-3d;
+  display: inline-flex;
+  margin-top: 100px;
+  color: #04043c;
+  font-weight: 100;
+  letter-spacing: 10px;
+  font-size: 190px;
+  cursor: pointer;
+}
+h1 span{
+  pointer-events: none;
+}
+.mid {
+  width: 100%;
+  background-color: #3907f2;
+  border-radius: .25em;
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 4px 2px;
+  color: white;
+  position : absolute;
+  isolation: isolate;
+}
+.mid::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: #04043c;
+  inset: 0;
+  border-radius: .25em;
+  scale: 0 1;
+  transition: scale 450ms;
+}
+.mid:hover::after,
+.mid:focus-visible::after {
+  scale: 1 1;
+}
+.introduction{
+  margin-top: 150px;
+  display:inline-block;
+  margin-bottom: 100px;
+
+}
+  .text {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .text::after{
+content: "";
+display: block;
+height: 5%;
+width: 2px;
+background: #dadada ;
+animation: cursor 1s infinite;
+  }
+
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes cursor {
+    0%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

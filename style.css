@@ -1,0 +1,226 @@
+/* Réinitialisation des marges et des paddings */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Space+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style de base pour le corps de la page */
+body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.5;
+}
+a {
+  background-color: #3907f2;
+  border-radius: .25em;
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  color: white;
+  position :relative;
+  isolation: isolate;
+}
+a::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: #04043c;
+  inset: 0;
+  border-radius: .25em;
+  scale: 0 1;
+  transition: scale 450ms;
+}
+a:hover::after,
+a:focus-visible::after {
+  scale: 1 1;
+}
+
+/* Style de la barre de navigation */
+header nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  
+}
+
+header nav a {
+  background-color: #3907f2;
+  text-decoration: none;
+  color : #d8d5cf;
+  padding: 5px;
+  font-size: 18px;
+}
+
+
+
+/* Style de la section de présentation */
+.presentation {
+  padding: 20px;
+
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.presentation p {
+  margin-bottom: 10px;
+}
+
+.presentation img {
+  width: 30%;
+  height: auto;
+display: block;
+margin : auto;
+}
+
+.compet {
+  display: flex;
+  margin: 10px;
+  color: #fff;
+  font-size: large;
+
+}
+
+/* Style de la section des compétences */
+.compet ul {
+  border-radius: 5px;
+  padding: 2rem;
+  border: 1px solid purple;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.cv {
+  margin: auto;
+  display: block;
+  justify-content: center;
+}
+
+
+/* Style de la section des projets */
+.projets {
+  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Utilisez une grille avec 3 colonnes égales */
+    grid-gap: 20px; /* Ajoutez un espacement entre les éléments de la grille */
+}
+
+.projets h3 {
+  margin-bottom: 10px;
+}
+
+.projets div {
+  margin-bottom: 20px;
+}
+
+.projets div a {
+  text-decoration: none;
+  color: #d8d5cf;
+  font-weight: bold;
+}
+
+.projets div p {
+  margin-top: 5px;
+}
+
+/* Style du pied de page */
+footer {
+  background-color: #04043c;
+  color: #fff;
+  padding: 20px;
+  max-width: 100%;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  color : white;
+}
+.introduction {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.mid{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  width: 40%;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 767px) {
+  .projets{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  .introduction {
+    display: block;
+  }
+.introduction img {
+  width: 30%;
+  height: auto;
+display: flex;
+margin : auto;
+
+}
+
+footer {
+width: 100%;
+}
+.cv{
+  width: 70%;
+}
+
+
+  }
+@media only screen and (min-width : 768px ) {
+  footer {
+width: 100%;
+  }
+  .projets{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  .introduction {
+    display: block;
+  }
+.introduction img {
+  width: 30%;
+  height: auto;
+display: flex;
+margin : auto;
+
+}
+}
